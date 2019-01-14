@@ -1,8 +1,15 @@
 #!/bin/bash
 
+# Homebrew path
+export PATH="/usr/local/sbin:$PATH"
+
 # .bashrc
 if [ -s ~/.bashrc ]; then
     source ~/.bashrc
+fi
+
+if [ -s ~/.docker-aliases ]; then
+    source ~/.docker-aliases
 fi
 
 # Git branch completion script

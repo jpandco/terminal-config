@@ -1,0 +1,9 @@
+#!/bin/bash
+
+alias dc="docker-compose"
+
+dexec() { docker exec -it `docker-compose ps -q $1` $2; }
+
+dockerip() { docker inspect "$(docker-compose ps -q "$1")" | grep '"IPAddress"' | cut -d '"' -f 4 | head -n 1; }
+
+alias dls='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.Image}}"'
