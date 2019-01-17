@@ -4,27 +4,21 @@
 export PATH="/usr/local/sbin:$PATH"
 
 # .bashrc
-if [ -s ~/.bashrc ]; then
-    source ~/.bashrc
+if [ -s ~/.terminal_conf/.bashrc ]; then
+    source ~/.terminal_conf/.bashrc
 fi
 
-if [ -s ~/.docker-aliases ]; then
-    source ~/.docker-aliases
+# Terminal prompt
+if [ -s ~/.terminal_conf/.prompt ]; then
+    source ~/.terminal_conf/.prompt
 fi
 
 # Git branch completion script
-if [ -s ~/.git_completion ]; then
-    source ~/.git_completion
+if [ -s ~/.terminal_conf/.git_completion ]; then
+    source ~/.terminal_conf/.git_completion
 fi
 
-# Git branch info
-parse_git_branch() {
-  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-}
-
-emojis=(🧙 🐶 🐺 🐱 🐭 🐰 🐯 🐨 🐻 🐷 🐮 🐵 🐼 🐧 🐢 🐙 🐳 🐬 👻 👾 🦁 🦊 🦒 🐘 🦕)
-
-emoji='`echo ${emojis[$RANDOM % 22]}`'
-
-# Customize bash prompt to show dir and git status
-export PS1="\[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $emoji $ "
+# Load handy docker shortcuts
+if [ -s ~/.terminal_conf/.docker-aliases ]; then
+    source ~/.terminal_conf/.docker-aliases
+fi

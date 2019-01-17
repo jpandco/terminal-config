@@ -1,5 +1,7 @@
 # Toolbelt
 
+alias home="cd ~"
+
 # clear command
 alias c="clear"
 alias cl="clear"
