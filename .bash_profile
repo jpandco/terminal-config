@@ -19,6 +19,11 @@ if [ -s ~/.terminal_conf/.git_completion ]; then
 fi
 
 # Load handy docker shortcuts
-if [ -s ~/.terminal_conf/.docker-aliases ]; then
-    source ~/.terminal_conf/.docker-aliases
+if [ -s ~/.terminal_conf/.docker_aliases ]; then
+    source ~/.terminal_conf/.docker_aliases
+fi
+
+# Load handy apache functions and shortcuts
+if [ -s ~/.terminal_conf/.apache_aliases ]; then
+    source ~/.terminal_conf/.apache_aliases
 fi
