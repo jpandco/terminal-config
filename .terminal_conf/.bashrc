@@ -1,3 +1,8 @@
+#env config
+
+# Homebrew path
+export PATH="/usr/local/sbin:$PATH"
+
 # Toolbelt
 
 alias home="cd ~"

@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Homebrew path
-export PATH="/usr/local/sbin:$PATH"
-
 # .bashrc
 if [ -s ~/.terminal_conf/.bashrc ]; then
     source ~/.terminal_conf/.bashrc
